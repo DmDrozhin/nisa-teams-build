@@ -1,0 +1,17 @@
+
+// PREVENT SELECTION OF CONTENT
+@mixin prev-slct {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+@mixin unselect {
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+// @include media('min', 'sm') { }
+// @include media('min', 'lg') { }

@@ -1,0 +1,98 @@
+@mixin H1 {
+  font-family: 'Lato-Black';
+  font-size: 72px;
+  line-height: 96%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H2 {
+  font-family: 'Lato-Black';
+  font-size: 64px;
+  line-height: 86%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H3 {
+  font-family: 'Lato-Black';
+  font-size: 56px;
+  line-height: 76%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H4 {
+  font-family: 'Lato-Black';
+  font-size: 48px;
+  line-height: 64%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H5 {
+  font-family: 'Lato-Black';
+  font-size: 40px;
+  line-height: 54%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H6 {
+  font-family: 'Lato-Black';
+  font-size: 32px;
+  line-height: 44%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H7 {
+  font-family: 'Lato-Black';
+  font-size: 32px;
+  line-height: 44%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H8 {
+  font-family: 'Lato-Black';
+  font-size: 24px;
+  line-height: 32%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H9 {
+  font-family: 'Lato-Black';
+  font-size: 20px;
+  line-height: 28%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H10 {
+  font-family: 'Lato-Black';
+  font-size: 40px;
+  line-height: 54%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H11 {
+  font-family: 'Lato-Black';
+  font-size: 32px;
+  line-height: 44%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H12 {
+  font-family: 'Lato-Black';
+  font-size: 32px;
+  line-height: 44%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H13 {
+  font-family: 'Lato-Black';
+  font-size: 24px;
+  line-height: 32%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}
+@mixin H14 {
+  font-family: 'Lato-Black';
+  font-size: 20px;
+  line-height: 28%;
+  // @include media('min', 'sm') { font-size: 14px; }
+  // @include media('min', 'lg') { font-size: 16px; }
+}

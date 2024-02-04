@@ -1,0 +1,30 @@
+@import '@/styles/fonts/fonts.scss';
+@import '@/styles/fonts/fonts-h.scss';
+@import '@/styles/fonts/fonts-p.scss';
+@import '@/styles/flex.scss';
+@import '@/styles/layouts.scss';
+@import '@/styles/resets.scss';
+@import '@/styles/colors.scss';
+@import '@/styles/other.scss';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scrollbar-gutter: stable both-edges;
+}
+
+body {
+  height: inherit;
+  width: inherit;
+  // mobile viewport bug fix */
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
