@@ -8,7 +8,7 @@
           <a class="top-menu__logo" :href="menu.nav1[0].path"><logo /></a>
 
           <transition name="menu">
-              <div class="top-menu__nav" v-show="isOpen" appear out-in>
+            <div class="top-menu__nav" v-show="isOpen" appear out-in>
               <nav class="nav-1">
                 <ol class="nav-1__list">
                   <transition-group name="links">
