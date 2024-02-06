@@ -1,5 +1,5 @@
 <template>
-  <div class="top-menu">
+  <section class="top-menu">
     <div class="top-menu__container">
       <div class="top-menu__probe" ref="elem" data-i="width meter"></div>
       <burger class="top-menu__burger" @toggle="toggle()" :isOpen="isOpen"/>
@@ -43,7 +43,7 @@
           </transition>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -58,7 +58,7 @@ const isOpen = ref(true)
 const toggle = () => { isOpen.value = !isOpen.value }
 
 const store = useStore()
-const menu = computed(() => store.getters['structure/TOP_MENU'])
+const menu = computed(() => store.getters['structure/HEADER_DATA'])
 
 const elem = ref(null)
 

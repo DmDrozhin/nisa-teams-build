@@ -1,7 +1,9 @@
+import footer from '@/data/footer.json'
+
 const structure = {
   namespaced: true,
   state: {
-    topMenu: {
+    headerData: {
       nav1: [
         { name: 'Home', path: '#home' },
         { name: 'Pricing', path: '#pricing' },
@@ -13,10 +15,20 @@ const structure = {
         { name: 'Login', path: '#login' },
         { name: 'Buy Nesa', path: '#nesa' }
       ]
-    }
+    },
+    footerData: {}
   },
   getters: {
-    TOP_MENU: (state) => state.topMenu
+    HEADER_DATA: (state) => state.headerData,
+    FOOTER_DATA: (state) => state.footerData
+  },
+  mutations: {
+    SAVE_UI_DATA (state, pl) { state.footerData = pl }
+  },
+  actions: {
+    LOAD_UI_DATA ({ commit }) {
+      commit('SAVE_UI_DATA', footer)
+    }
   }
 }
 export default structure

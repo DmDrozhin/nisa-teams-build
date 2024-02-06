@@ -1,34 +1,34 @@
 {
   "title": "Build a beautiful product with align",
-  "subTite": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus euismod fusce pulvinar amet. Sollicitudin nullam mauris tellus accumsan, phasellus. Ut ac consequat arcu non aliquam.",
+  "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus euismod fusce pulvinar amet. Sollicitudin nullam mauris tellus accumsan, phasellus. Ut ac consequat arcu non aliquam.",
   "socials": [
-    {"icon": "Twitter", "link": "https://twitter.com/#"},
-    {"icon": "Facebook", "link": "https://fb.com/#"},
-    {"icon": "Google", "link": "https://google.com/#"},
-    {"icon": "Pinterest", "link": "https://pinterest.com/#"},
-    {"icon": "LinkedIn", "link": "https://www.linkedin.com/#"}
+    {"icon": "Twitter", "link": "#https://twitter.com/#"},
+    {"icon": "Facebook", "link": "#https://fb.com/#"},
+    {"icon": "Google", "link": "#https://google.com/#"},
+    {"icon": "Pinterest", "link": "#https://pinterest.com/#"},
+    {"icon": "LinkedIn", "link": "#https://www.linkedin.com/#"}
   ],
   "menu": [
     { 
       "Overview": [
-        {"name": "Home", "link": "/home/"},
-        {"name": "About", "link": "/about/"},
-        {"name": "Blog", "link": "/blog"},
-        {"name": "Blog post", "link": "/blog-post"},
-        {"name": "Team Member", "link": "/team-member"}
+        {"name": "Home", "link": "#/home/"},
+        {"name": "About", "link": "#/about/"},
+        {"name": "Blog", "link": "#/blog"},
+        {"name": "Blog post", "link": "#/blog-post"},
+        {"name": "Team Member", "link": "#/team-member"}
       ]
     },
     { 
       "Pages": [
-        {"name": "Contact", "link": "/contact/"},
-        {"name": "Customer Story", "link": "/customer-story/"},
-        {"name": "Login", "link": "/login/"},
-        {"name": "Register", "link": "/register/"},
-        {"name": "Style Guide", "link": "style-guide/"},
-        {"name": "Change log", "link": "/change-log/"},
-        {"name": "License", "link": "/License/"},
-        {"name": "404", "link": "/404/"},
-        {"name": "Password", "link": "/password/"}
+        {"name": "Contact", "link": "#/contact/"},
+        {"name": "Customer Story", "link": "#/customer-story/"},
+        {"name": "Login", "link": "#/login/"},
+        {"name": "Register", "link": "#/register/"},
+        {"name": "Style Guide", "link": "#/style-guide/"},
+        {"name": "Change log", "link": "#/change-log/"},
+        {"name": "License", "link": "#/License/"},
+        {"name": "404", "link": "#/404/"},
+        {"name": "Password", "link": "#/password/"}
 
       ]
     },
