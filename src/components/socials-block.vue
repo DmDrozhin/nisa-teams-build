@@ -1,15 +1,20 @@
 <template>
   <section class="socials">
-    <div class="socials__icon twitter"></div>
-    <div class="socials__icon fb"></div>
-    <div class="socials__icon google"></div>
-    <div class="socials__icon pint"></div>
-    <div class="socials__icon linked"></div>
+    <a
+      class="socials__icon"
+      v-for="it, idx in props.setts"
+      :key="idx" href=""
+      :style="{
+        backgroundImage: 'url(' + require(`../assets/svg/socials/${it.icon}.svg`) + ')'
+      }"
+      :src="it.link"
+    ></a>
   </section>
 </template>
 
 <script setup>
-
+import { defineProps } from 'vue'
+const props = defineProps({ setts: { type: Array } })
 </script>
 
 <style lang="scss" scoped>
@@ -24,11 +29,5 @@
     background-repeat: no-repeat;
     height: 17px;
   }
-  &__icon.twitter { background-image: url('@/assets/svg/socials/twit.svg'); }
-  &__icon.fb { background-image: url('@/assets/svg/socials/fb.svg'); }
-  &__icon.google { background-image: url('@/assets/svg/socials/ggl.svg'); }
-  &__icon.pint { background-image: url('@/assets/svg/socials/pint.svg'); }
-  &__icon.linked { background-image: url('@/assets/svg/socials/in.svg'); }
-
 }
 </style>

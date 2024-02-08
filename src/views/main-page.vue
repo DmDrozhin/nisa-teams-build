@@ -2,6 +2,7 @@
   <div class="main">
     <div class="main__container" ref="elem">
       <div class="main__wrapper">
+        Main section
       </div>
     </div>
   </div>
@@ -23,6 +24,7 @@
   }
   &__wrapper {
     @include wrapper;
+    height: 50px;
     border: 0.5px dashed orange;
     margin: 0 auto;
   }

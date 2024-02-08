@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/nisa-teams-build' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/nisa-teams-build/' : '/',
   css: {
     loaderOptions: {
       sass: {

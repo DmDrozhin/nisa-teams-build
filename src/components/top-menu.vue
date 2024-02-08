@@ -5,9 +5,11 @@
       <burger class="top-menu__burger" @toggle="toggle()" :isOpen="isOpen"/>
       <div class="top-menu__wrap">
 
-          <a class="top-menu__logo" :href="menu.nav1[0].path"><logo /></a>
+          <a class="top-menu__logo" :src="nav1[0].path">
+            <logo />
+          </a>
 
-          <transition name="menu">
+          <transition name="menu" appear>
             <div class="top-menu__nav" v-show="isOpen" appear out-in>
               <nav class="nav-1">
                 <ol class="nav-1__list">
@@ -15,7 +17,7 @@
                     <li
                       class="nav-1__item"
                       v-show="isOpen"
-                      v-for="link, idx in menu.nav1"
+                      v-for="link, idx in nav1"
                       :key="`key${idx}`"
                       :style="`--i: ${idx}`"
                     >
@@ -29,14 +31,15 @@
                 <a
                   class="nav-2__link"
                   :key="11"
-                  :href="menu.nav2[0].path">
-                  {{ menu.nav2[0].name }}
+                  :src="nav2[0].path"
+                >
+                  {{ nav2[0].name }}
                 </a>
                 <ua-button-base
                   class="nav-2__btn" col="pink"
                   :key="12"
                 >
-                  {{ menu.nav2[1].name }}
+                  {{ nav2[1].name }}
                 </ua-button-base>
               </nav>
             </div>
@@ -50,21 +53,25 @@
 
 import logo from '@/components/ui/logo/site-logo.vue'
 import burger from '@/components/ui/ui-button-nav.vue'
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+// eslint-disable-next-line no-unused-vars
+import { ref, toRef, toRefs, reactive, computed, onMounted, onUnmounted } from 'vue'
 import { useStore } from 'vuex'
-// import { useResizeObserver } from '@vueuse/core'
 
 const isOpen = ref(true)
 const toggle = () => { isOpen.value = !isOpen.value }
 
 const store = useStore()
-const menu = computed(() => store.getters['structure/HEADER_DATA'])
+const getData = (pl) => {
+  return store.getters['structure/HEADER_DATA_PL'](pl)
+}
+const nav1 = computed(() => getData('nav1'))
+const nav2 = computed(() => getData('nav2'))
 
-const elem = ref(null)
-
+// Observe elem width for specifying viewport type
 const onResize = (w) => {
   w <= 375 ? isOpen.value = false : isOpen.value = true
 }
+const elem = ref(null)
 const obz = new ResizeObserver((el) => onResize(el[0].contentRect.width))
 onMounted(() => { obz.observe(elem.value) })
 onUnmounted(() => { obz.unobserve(elem.value) })

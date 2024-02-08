@@ -2,15 +2,17 @@
   <topMenu />
     <router-view/>
   <bottomMenu />
+  <bottomFinRow />
 </template>
 
 <script setup>
 import topMenu from '@/components/top-menu.vue'
 import bottomMenu from '@/components/bottom-menu.vue'
-import { onMounted } from 'vue'
-import { useStore } from 'vuex'
-const store = useStore()
-onMounted(() => store.dispatch('structure/LOAD_UI_DATA'))
+import bottomFinRow from '@/components/bottom-final-row.vue'
+// import { onMounted } from 'vue'
+// import { useStore } from 'vuex'
+// const store = useStore()
+// onMounted(() => store.dispatch('structure/LOAD_UI_DATA'))
 </script>
 
 <style lang="scss">
