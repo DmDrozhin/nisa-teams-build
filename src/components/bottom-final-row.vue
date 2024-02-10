@@ -35,25 +35,47 @@ const data = computed(() => store.getters['structure/FOOTER_DATA_PL']('footer'))
 .bottom-row {
   width: 100%;
   background-color: $bl-1E;
-  border-top: 0.5px solid $gr-69;
-  $sz-s: 13px;
-  $sz-l: 20px;
+  border-top: 0.5px solid $gr-69; // real line
+  $sz-s: 13px; // icon & logo
+  $sz-l: 20px; // icon & logo
   &__container { @include container; }
   &__wrapper {
     @include wrapper;
-    @include fr-sb-c;
     color: $wt;
-    @include media('min', 'xs') { height: 78px; }
-    @include media('min', 'lg') { height: 51px; padding-inline: 30px; }
-    @include media('min', 'xxl') { height: 68px; }
+    @include media('min', 'xs') {
+      @include fr; flex-wrap: wrap; align-content: flex-start; row-gap: 12px;
+      height: 78px;
+      padding: 7px 0 0 0;
+    }
+    @include media('min', 'lg') {
+      @include fr-sb-c; flex-wrap: nowrap; row-gap: unset;
+      height: 51px;
+      padding: 0 17px 0 40px;
+    }
+    @include media('min', 'xxl') {
+      height: 68px;
+      padding: 0 0 0 0;
+    }
   }
-  &__part { @include fr-sb-c; }
+  &__part {
+    @include media('min', 'xs') { @include fr-st-c; }
+    @include media('min', 'lg') { @include fr-sb-c; }
+  }
+  &__part.l {
+    @include media('min', 'xs') { flex: 1 0 100%; @include fr-c-c; }
+    @include media('min', 'lg') { flex: auto; @include fr-st-c; }
+  }
   &__part.c {
     // border: 0.5px dashed olivedrab; // tech
-    position: relative;
-    left: -64px;
+    @include media('min', 'xs') { flex: 0 1 70%; }
+    @include media('min', 'lg') { flex: auto; position: relative; left: -20px; }
+    @include media('min', 'xxl') { position: relative; left: -64px; }
   }
-  &__part.r { column-gap: 10px; }
+  &__part.r {
+    @include media('min', 'xs') { flex: 1; @include fr-nd-c; }
+    @include media('min', 'lg') { flex: 0; }
+    column-gap: 10px;
+  }
 
   // ICON
   &__icon, .icon {
@@ -99,7 +121,9 @@ const data = computed(() => store.getters['structure/FOOTER_DATA_PL']('footer'))
   }
   &__over {
     @include p10-10-9;
-    margin-right: 14px;
+    @include media('min', 'xs') { margin-right: 3px; }
+    @include media('min', 'lg') { margin-right: 10px; }
+    @include media('min', 'xxl') { margin-right: 14px; }
   }
   &__pages {
     @include p10-10-9;

@@ -22,7 +22,7 @@ const props = defineProps({ setts: { type: Array } })
   // border: 0.5px dashed orange;
   height: 19px;
   @include fr-sb-c;
-  @include media('min', 'xs') { width: 55%; }
+  @include media('min', 'xs') { width: 61%; }
   @include media('min', 'lg') { width: 70%; }
   @include media('min', 'xxl') { width: 52%; }
   &__icon {

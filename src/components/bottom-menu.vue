@@ -48,30 +48,28 @@ const menu = computed(() => data.value[Object.keys(data.value)[3]])
   @include media('min', 'xs') { height: 645px; }
   @include media('min', 'lg') { height: 486px; }
   @include media('min', 'xxl') { height: 519px; }
-  &__container {
-    @include container;
-  }
+  &__container { @include container; height: inherit; }
   &__wrap {
+    // border: 0.5px dashed rgb(0, 128, 122); // tech
     @include wrapper;
-    @include media('min', 'xs') { @include fc; padding-top: 40px; }
+    @include media('min', 'xs') { @include fc; padding: 39px 0 0 0; }
     @include media('min', 'lg') { @include fr; column-gap: 20px; padding: 73px 20px 0 20px; }
     @include media('min', 'xxl') { column-gap: 20px; padding: 80px 0 0 0; }
   }
   &__side-l {
-    border: 0.5px dashed rgb(0, 128, 122);
-    @include media('min', 'xs') { flex: 1 1 100%; }
+    @include media('min', 'xs') { flex: 1 1 100%; padding-right: 6%; padding-bottom: 32px; }
     @include media('min', 'lg') { flex: 0 0 333px; padding-right: 6%; }
     @include media('min', 'xxl') { flex: 0 0 455px; padding-right: 7%; }
     & .adv {
       color: $wt;
       &__title {
-        @include media('min', 'xs') { @include H8; }
-        @include media('min', 'lg') { @include H6; margin-bottom: 16px; }
+        @include media('min', 'xs') { @include H8; margin-bottom: 15px; padding-right: 6%; }
+        @include media('min', 'lg') { @include H6; margin-bottom: 16px; padding-right: 0; }
         @include media('min', 'xxl') { @include H5; margin-bottom: 27px; }
 
       }
       &__sub-title {
-        border: 0.5px dashed rgb(70, 228, 220);
+        // border: 0.5px dashed rgb(70, 228, 220); // tech
         @include media('min', 'xs') { @include P9-R; }
         @include media('min', 'xxl') { @include P6-R; }
         margin-bottom: 24px;
@@ -83,15 +81,14 @@ const menu = computed(() => data.value[Object.keys(data.value)[3]])
     & .links {
       @include fr-st;
 
-      @include media('min', 'xs') { @include P7-B; }
+      @include media('min', 'xs') { @include P7-B; column-gap: 12%; }
       @include media('min', 'lg') { @include P4-B; column-gap: 12%; }
-      @include media('min', 'xxl') { @include P1-B; column-gap: 100px; }
+      @include media('min', 'xxl') { @include P1-B; column-gap: 18%; }
       &__group {
         color: $wt;
-        border: 0.5px dashed olive;
+        // border: 0.5px dashed olive; // tech
         @include fc-st-st;
-
-        @include media('min', 'xs') { row-gap: 17px; }
+        @include media('min', 'xs') { row-gap: 25px; }
         @include media('min', 'lg') { row-gap: 22px; }
         @include media('min', 'xxl') { row-gap: 17px; }
       }
@@ -101,7 +98,7 @@ const menu = computed(() => data.value[Object.keys(data.value)[3]])
         @include media('min', 'xxl') { @include P1-B; }
       }
       &__list {
-        @include media('min', 'xs') { @include P10-R; }
+        @include media('min', 'xs') { @include P10-R; row-gap: 16px; }
         @include media('min', 'lg') { @include P9-R; row-gap: 16px; }
         @include media('min', 'xxl') { @include P6-R; row-gap: 16px; }
         @include fc-st-st;
