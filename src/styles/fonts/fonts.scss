@@ -1,52 +1,38 @@
 @font-face {
-  font-family: 'Satoshi-Regular';
-  src: local('Satoshi Regular'), local('Satoshi-Regular');
-  src: url('@/assets/fonts/Satoshi-Regular.woff2') format('woff2'),
-      url('@/assets/fonts/Satoshi-Regular.woff') format('woff'),
-      url('@/assets/fonts/Satoshi-Regular.eot?#iefix') format('embedded-opentype');
+  font-family: 'Roboto-LightItalic';
+  src: local('Roboto Light-Italic'), local('Roboto-LightItalic');
+  src: url('@/assets/fonts/Roboto-LightItalic.eot');
+  src: url('@/assets/fonts/Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('@/assets/fonts/Roboto-LightItalic.otf') format('otf'),
+      url('@/assets/fonts/Roboto-LightItalic.woff') format('woff'),
+      url('@/assets/fonts/Roboto-LightItalic.woff2') format('woff2');
+      font-display: swap;
+      font-style: italic;
+      font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto Regular'), local('Roboto-Regular');
+  src: url('@/assets/fonts/Roboto-Regular.eot');
+  src: url('@/assets/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+      url('@/assets/fonts/Roboto-Regular.otf') format('otf'),
+      url('@/assets/fonts/Roboto-Regular.woff') format('woff'),
+      url('@/assets/fonts/Roboto-Regular.woff2') format('woff2');
+      font-display: swap;
+      font-style: normal;
       font-weight: 400;
-      font-display: swap;
-      font-style: normal;
 }
 @font-face {
-  font-family: 'Satoshi-Medium';
-  src: local('Satoshi Medium'), local('Satoshi-Medium');
-  src: url('@/assets/fonts/Satoshi-Medium.woff2') format('woff2'),
-      url('@/assets/fonts/Satoshi-Medium.woff') format('woff'),
-      url('@/assets/fonts/Satoshi-Medium.eot?#iefix') format('embedded-opentype');
+  font-family: 'Roboto-Medium';
+  src: local('Roboto Medium'), local('Roboto-Medium');
+  src: url('@/assets/fonts/Roboto-Medium.eot');
+  src: url('@/assets/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+      url('@/assets/fonts/Roboto-Medium.otf') format('otf'),
+      url('@/assets/fonts/Roboto-Medium.woff') format('woff'),
+      url('@/assets/fonts/Roboto-Medium.woff2') format('woff2');
+      font-display: swap;
+      font-style: normal;
       font-weight: 500;
-      font-display: swap;
-      font-style: normal;
-}
-@font-face {
-  font-family: 'Satoshi-Bold';
-  src: local('Satoshi Bold'), local('Satoshi-Bold');
-  src: url('@/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
-      url('@/assets/fonts/Satoshi-Bold.woff') format('woff'),
-      url('@/assets/fonts/Satoshi-Bold.eot?#iefix') format('embedded-opentype');
-      font-weight: 700;
-      font-display: swap;
-      font-style: normal;
-}
-@font-face {
-  font-family: 'Satoshi-Bold';
-  src: local('Satoshi Bold'), local('Satoshi-Bold');
-  src: url('@/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
-      url('@/assets/fonts/Satoshi-Bold.woff') format('woff'),
-      url('@/assets/fonts/Satoshi-Bold.eot?#iefix') format('embedded-opentype');
-      font-weight: 700;
-      font-display: swap;
-      font-style: normal;
-}
-@font-face {
-  font-family: 'Lato-Black';
-  src: local('Lato Black'), local('Lato-Black');
-  src: url('@/assets/fonts/Lato-Black.eot');
-  src: url('@/assets/fonts/Lato-Black.woff2') format('woff2'),
-      url('@/assets/fonts/Lato-Black.woff') format('woff'),
-      url('@/assets/fonts/Lato-Black.eot?#iefix') format('embedded-opentype');
-      font-weight: 900;
-      font-style: normal;
 }
 @font-face {
   font-family: 'Roboto-Bold';
@@ -55,6 +41,7 @@
   src: url('@/assets/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
       url('@/assets/fonts/Roboto-Bold.woff') format('woff'),
       url('@/assets/fonts/Roboto-Bold.woff2') format('woff2');
+      font-display: swap;
       font-weight: 700;
       font-style: normal;
 }
@@ -63,10 +50,8 @@
   font-size: 16px;
 }
 body {
-  font-family: 'Satoshi-Regular', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto-Regular', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
 }
-
-

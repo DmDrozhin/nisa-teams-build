@@ -27,7 +27,7 @@
       {"name": "404", "link": "#/404/"},
       {"name": "Password", "link": "#/password/"}
     ],
-    "Connect": [
+    "Connect:": [
       {"name": "+001 234 567 89", "link": "+00123456789"},
       {"name": "hellow@nesa.com", "link": "hellow@nesa.com"}
     ]

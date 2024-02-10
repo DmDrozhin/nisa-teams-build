@@ -1,5 +1,5 @@
-import footer from '@/data/footer.json'
-import header from '@/data/header.json'
+import footer from '@/data/footer-menu.json'
+import header from '@/data/header-menu.json'
 
 const structure = {
   namespaced: true,
