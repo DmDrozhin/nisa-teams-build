@@ -20,9 +20,11 @@ const props = defineProps({ setts: { type: Array } })
 <style lang="scss" scoped>
 .socials {
   // border: 0.5px dashed orange;
-  width: 100%;
   height: 19px;
   @include fr-sb-c;
+  @include media('min', 'xs') { width: 55%; }
+  @include media('min', 'lg') { width: 70%; }
+  @include media('min', 'xxl') { width: 52%; }
   &__icon {
     // border: 0.5px dashed rgb(0, 21, 255);
     flex: 0 0 20%;
