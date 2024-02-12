@@ -1,3 +1,43 @@
+// main sub-title italic
+@mixin H1-ITL {
+  font-family: 'Roboto-LightItalic';
+  font-size: 74px;
+  line-height: 81px;
+  letter-spacing: -3.4px;
+}
+@mixin H1-ITM {
+  font-family: 'Roboto-LightItalic';
+  font-size: 56px;
+  line-height: 81px;
+  letter-spacing: -2.5px;
+}
+@mixin H1-ITS {
+  font-family: 'Roboto-LightItalic';
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1.2px;
+}
+// main title bold
+@mixin H1-BDL {
+  font-family: 'Roboto-Bold';
+  font-size: 74px;
+  line-height: 81px;
+  letter-spacing: -3.1px;
+}
+@mixin H1-BDM {
+  font-family: 'Roboto-Bold';
+  font-size: 56px;
+  line-height: 81px;
+  letter-spacing: -2.3px;
+}
+@mixin H1-BDS {
+  font-family: 'Roboto-Bold';
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1.1px;
+}
+
+// mockup assets:
 @mixin H1 {
   font-family: 'Roboto-Bold';
   font-size: 72px;
@@ -69,3 +109,4 @@
   font-size: 20px;
   line-height: 28px;
 }
+

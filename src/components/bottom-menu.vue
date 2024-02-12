@@ -119,7 +119,11 @@ const menu = computed(() => data.value[Object.keys(data.value)[3]])
         @include media('min', 'xxl') { @include P6-R; row-gap: 16px; }
         @include fc-st-st;
       }
-      &__link {}
+      &__link {
+        transition: color 0.3s ease;
+        &:hover { color: $pink-78; }
+      }
+
     }
   }
 }

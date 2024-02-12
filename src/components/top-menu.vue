@@ -122,7 +122,7 @@ onUnmounted(() => { obz.unobserve(elem.value) })
     @mixin link {
       // border: 0.5px dashed orangered;
       @include media('min', 'xs') { @include P9-R; height: 44px; @include fr-st-c; }
-      @include media('min', 'lg') { @include P9-R; height: 30px; width: 81px; @include fr-c-c; }
+      @include media('min', 'lg') { @include P9-R; height: 30px; width: 83px; @include fr-c-c; }
       @include media('min', 'xxl') { @include P6-R; height: 40px; width: 91px; @include fr-c-c; }
       color: $wt;
       transition: color 0.3s ease;
@@ -159,6 +159,7 @@ onUnmounted(() => { obz.unobserve(elem.value) })
         @include media('min', 'xxl') { flex-basis: 91px; }
       }
       &__btn {
+        width: fit-content;
         @include media('min', 'xs') { margin-left: 0; margin-right: -7px; }
         @include media('min', 'lg') { margin-left: 8px; margin-right: 0; }
         @include media('min', 'xxl') { margin-left: 16px; }

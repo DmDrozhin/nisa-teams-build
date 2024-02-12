@@ -11,22 +11,8 @@
             Nisa is constantly improving to move forward through dashboard, statistics, data and verify and superior human
             resources.
           </div>
-          <ua-button-base class="catcher__btn" col="pink">
-            <div class="catcher__btn-content">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                display="flex"
-              >
-                <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <span>Get Started</span>
-            </div>
+          <ua-button-base class="catcher__btn btn" col="pink">
+            <span class="btn__txt">Get Started</span>
           </ua-button-base>
         </div>
         <div class="main-pic">
@@ -61,92 +47,110 @@
 <style lang="scss" coped>
 .top-section {
   background-color: $bl-1E;
-
-  &__container {
-    @include container;
-  }
-
+  &__container { @include container; }
   &__wrapper {
     border: 0.5px dashed orange;
     @include wrapper;
     color: $wt;
     display: grid;
-    grid-template-columns: 58% 1fr;
     grid-template-areas:
       "title catcher"
       "picture picture";
-
+    @include media('min', 'xs') {
+      grid-template-columns: 53% auto;
+      padding: 21px 0 37px;
+    }
+    @include media('min', 'lg') {
+      grid-template-columns: 57% 1fr;
+      padding: 42px 0 65px;
+    }
     @include media('min', 'xxl') {
-      padding: 40px 0;
+      grid-template-columns: 58% 1fr;
+      padding: 40px 0 45px;
     }
   }
 
   & .title {
     grid-area: title;
-
     &__sub-title {
-      font-family: 'Roboto-LightItalic';
-      font-size: 74px;
-      line-height: 81px;
-      letter-spacing: -3.3px;
+      @include media('min', 'xs') { @include H1-ITS }
+      @include media('min', 'lg') { @include H1-ITM }
+      @include media('min', 'xxl') { @include H1-ITL }
     }
-
     &__title {
-      font-family: 'Roboto-Bold';
-      font-size: 74px;
-      line-height: 81px;
-      letter-spacing: -3.2px;
+      @include media('min', 'xs') { @include H1-BDS }
+      @include media('min', 'lg') { @include H1-BDM }
+      @include media('min', 'xxl') { @include H1-BDL }
     }
   }
-
   & .catcher {
+    // border: 0.5px dashed peru;
     align-self: end;
     grid-area: catcher;
-
+    @include media('min', 'xs') { margin-bottom: 20px; }
+    @include media('min', 'lg') { margin-bottom: 21px; }
+    @include media('min', 'xxl') { margin-bottom: -6px; }
     &__txt {
-      @include P3-R;
-
-      @include media('min', 'xxl') {
-        margin-bottom: 40px;
-      }
+      @include media('min', 'xs') { @include P10-R; margin-bottom: 15px; padding-right: 5px; }
+      @include media('min', 'lg') { @include P9-R; margin-bottom: 23px; padding-right: 5px; }
+      @include media('min', 'xxl') { @include P3-R; margin-bottom: 30px; padding-right: 0; }
     }
-    &__btn {}
-    &__btn-content {
-      @include fr-c-c;
-      column-gap: 5px;
+    &__btn, .btn {
+      height: 48px;
+      width: fit-content;
+      @include media('min', 'xs') { padding-inline: 31px 23px; margin-left: 0; }
+      @include media('min', 'lg') { padding-inline: 31px 40px; margin-left: 2px; }
+      @include media('min', 'xxl') { padding-inline: 32px 40px; margin-left: 3px; }
+      &__content {
+        @include fr-sb-c;
+      }
+      &__txt {
+        @include fr-c-c;
+        white-space: nowrap;
+      }
+      &__txt::after {
+        content: url(@/assets/svg/arr-right.svg);
+        position: relative;
+        display: block;
+        $sz: 24px;
+        width: $sz;
+        height: $sz;
+        @include media('min', 'xs') { left: 18px; }
+        @include media('min', 'lg') { left: 25px; }
+        @include media('min', 'xxl') { left: 25px; }
+      }
     }
   }
 
   & .main-pic {
-    @include media('min', 'xxl') {
-      padding: 40px 0 0 0;
-    }
-
+    @include media('min', 'xs') { padding: 24px 0 0 0; }
+    @include media('min', 'lg') { padding: 45px 0 0 0; }
+    @include media('min', 'xxl') { padding: 85px 0 0 0; }
     grid-area: picture;
-
     &__img-wrap {
       position: relative;
-
-      @include media('min', 'xxl') {
-        padding-bottom: 474px;
-      }
-
-      width: 100%;
+      max-width: 100%;
+      @include media('min', 'xs') { padding-bottom: 53.2%; }
+      @include media('min', 'lg') { padding-bottom: 358px; }
+      @include media('min', 'xxl') { padding-bottom: 474px; }
     }
-
-    &__img>img {
+    &__img > img {
       // border: 0.5px dashed lawngreen; // tech
-      position: absolute;
-      object-fit: cover;
       border-radius: 16px;
       overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
     &__pop {}
   }
-
   &__divider {
-    border-top: 100px solid $bl-1E;
     border-left: 100vw solid transparent;
+    @include media('min', 'xs') { border-top: 42px solid $bl-1E; }
+    @include media('min', 'lg') { border-top: 74px solid $bl-1E; }
+    @include media('min', 'xxl') { border-top: 95px solid $bl-1E; }
   }
 }</style>
