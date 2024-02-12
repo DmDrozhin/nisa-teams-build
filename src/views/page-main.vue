@@ -1,7 +1,7 @@
 <template>
   <div class="main">
+    <topSectionV1 />
     <div class="main__container" ref="elem">
-      <topSectionV1 />
       <div class="main__wrapper">
         Main section
       </div>
@@ -15,8 +15,7 @@ import topSectionV1 from '../components/page1-top-section-v1.vue'
 
 <style lang="scss" scoped>
 .main {
-  background-color: #5a5959;
-  height: 600px;
+  background-color: #c3c3c3;
   width: 100%;
   margin: 0 auto;
   &__container {
@@ -26,7 +25,7 @@ import topSectionV1 from '../components/page1-top-section-v1.vue'
   &__wrapper {
     @include wrapper;
     height: 50px;
-    border: 0.5px dashed orange;
+    // border: 0.5px dashed orange;
     margin: 0 auto;
   }
 }
