@@ -16,7 +16,8 @@ $breaks: ("xs": 0px, "sm": 375px, "lg": 834px, 'xxl': 1440px);
 // Page
 @mixin container {
   margin: 0 auto;
-  @include media('min', 'xs') { width: 375px; }
+  @include media('min', 'xs') { width: 320px; }
+  @include media('min', 'sm') { width: 375px; }
   @include media('min', 'lg') { width: 834px; }
   @include media('min', 'xxl') {width: 1440px; }
   border-left: 0.5px dashed lightpink;
@@ -25,7 +26,8 @@ $breaks: ("xs": 0px, "sm": 375px, "lg": 834px, 'xxl': 1440px);
 // Page container
 @mixin wrapper {
   margin: 0 auto;
-  @include media('min', 'xs') { width: 343px; }
+  @include media('min', 'xs') { width: 280px; }
+  @include media('min', 'sm') { width: 343px; }
   @include media('min', 'lg') { width: 786px; }
   @include media('min', 'xxl') { width: 1040px; }
 };

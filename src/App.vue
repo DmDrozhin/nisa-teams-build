@@ -6,9 +6,9 @@
 </template>
 
 <script setup>
-import topMenu from '@/components/top-menu.vue'
-import bottomMenu from '@/components/bottom-menu.vue'
-import bottomFinRow from '@/components/bottom-final-row.vue'
+import topMenu from '@/components/menu-top.vue'
+import bottomMenu from '@/components/menu-bottom.vue'
+import bottomFinRow from '@/components/menu-bottom-row.vue'
 // import { onMounted } from 'vue'
 // import { useStore } from 'vuex'
 // const store = useStore()

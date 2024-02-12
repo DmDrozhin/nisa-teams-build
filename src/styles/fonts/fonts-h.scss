@@ -1,3 +1,10 @@
+@mixin H3-STSH {
+  font-family: 'Satoshi-Bold';
+  line-height: auto;
+  @include media('min', 'xs') { font-size: 18px; }
+  @include media('min', 'lg') { font-size: 48px; }
+}
+
 // main sub-title italic
 @mixin H1-ITL {
   font-family: 'Roboto-LightItalic';

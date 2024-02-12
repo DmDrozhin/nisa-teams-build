@@ -1,0 +1,12 @@
+{
+  "s1": [
+    { "title": "Better Products With Nisa" },
+    { "sub-title": "Teams Build" },
+    { "catcher": "Nisa is constantly improving to move forward through dashboard, statistics, data and verify and superior human resources." },
+    { "button": "Get Started", "path": "#get-started" }
+  ],
+  "s2": [
+    { "name": "Login", "path": "#login" },
+    { "name": "Buy Nesa", "path": "#nesa" }
+  ]
+}

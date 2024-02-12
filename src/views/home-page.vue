@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <topSectionV1 />
+    <section1Ver1 />
     <div class="main__container" ref="elem">
       <div class="main__wrapper">
         Main section
@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import topSectionV1 from '../components/page1-top-section-v1.vue'
+import section1Ver1 from '@/components/sections/home-page-sec1-v1.vue'
 </script>
 
 <style lang="scss" scoped>

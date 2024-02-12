@@ -45,6 +45,16 @@
       font-weight: 700;
       font-style: normal;
 }
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: local('Satoshi Bold'), local('Satoshi-Bold');
+  src: url('@/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+      url('@/assets/fonts/Satoshi-Bold.woff') format('woff'),
+      url('@/assets/fonts/Satoshi-Bold.eot?#iefix') format('embedded-opentype');
+      font-weight: 700;
+      font-display: swap;
+      font-style: normal;
+}
 
 :root {
   font-size: 16px;

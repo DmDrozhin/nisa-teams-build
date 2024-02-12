@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import socialsBlock from '@/components/socials-block.vue'
+import socialsBlock from '@/components/block-socials.vue'
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 const store = useStore()
