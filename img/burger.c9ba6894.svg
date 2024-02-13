@@ -1,0 +1,12 @@
+<svg 
+  width="46" 
+  height="26" 
+  viewBox="0 0 46 26" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+  display="flex"
+>
+  <rect width="46" height="26" fill="#1E1E1E" />
+  <line y1="6.5" x2="46" y2="6.5" stroke="white" />
+  <line y1="18.5" x2="46" y2="18.5" stroke="white" />
+</svg>
