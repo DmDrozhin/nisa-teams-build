@@ -28,22 +28,21 @@
 
 <script setup>
 import authorBlock from '@/components/ui/ui-author-block.vue'
-// this fn generates object with data for tag picture
-// import genPicture from '@/methods/gen-picture-data.js'
 import { useStore } from 'vuex'
 // eslint-disable-next-line no-unused-vars
 import { computed, onMounted, ref, unref } from 'vue'
 const store = useStore()
 const sec2 = store.getters['structure/HOME_PAGE_PL']('s2') // all data for 2nd section
 
+// this computed created object with needed data for <picture>
 const picDt = computed(() => {
   const srcSetts = [] // for picture sources
   const pic = sec2[6] // object with picture settings
   for (let idx = 0; idx < pic.breaks.length; idx++) {
     const dt = pic.breaks[idx] // each break settings ("1440px", "LG", ["1x", "2x"])
     const source = {}
-    source.media = `${pic.media}: ${dt[0]}` // media="(min-width: 1440px)"
-    source.arr = [] // array with Webpack links to img files
+    source.media = `(${pic.media}: ${dt[0]})` // media="(min-width: 1440px)"
+    source.arr = [] // array with Webpack URLs to img files
     for (let idx2 = 0; idx2 < dt[2].length; idx2++) {
       const path = pic.path + pic.name + '-' // "page-1/sec-2/" + "man-with-tablet"
       const dt2 = dt[2][idx2] // each display density rate constant -> 2x, 3x
