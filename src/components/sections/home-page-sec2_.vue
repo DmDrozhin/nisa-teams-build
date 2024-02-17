@@ -36,10 +36,6 @@ import { computed, onMounted, ref, unref } from 'vue'
 const store = useStore()
 const sec2 = store.getters['structure/HOME_PAGE_PL']('s2') // all data for 2nd section
 
-// This one Webpack import - Ok
-// eslint-disable-next-line no-unused-vars
-const sample = computed(() => require(`@/assets/img/${sec2[5].path}${sec2[5].breaks[0][1][1]}`))
-
 const picDt = computed(() => {
   const srcSetts = [] // for picture sources
   const pic = sec2[6] // object with picture settings
@@ -49,7 +45,7 @@ const picDt = computed(() => {
     source.media = `${pic.media}: ${dt[0]}` // media="(min-width: 1440px)"
     source.arr = [] // array with Webpack links to img files
     for (let idx2 = 0; idx2 < dt[2].length; idx2++) {
-      const path = pic.path + '_' + pic.name + '_' // "page-1/sec-2/" + "man-with-tablet"
+      const path = pic.path + pic.name + '-' // "page-1/sec-2/" + "man-with-tablet"
       const dt2 = dt[2][idx2] // each display density rate constant -> 2x, 3x
       const url = require(`@/assets/img/${path}${dt[1]}-@${dt2}.webp`) // Webpack's path
       source.arr.push(url + ' ' + dt2) // adding DPR to the end ...2x, 3x
