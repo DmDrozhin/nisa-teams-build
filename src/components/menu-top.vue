@@ -35,12 +35,12 @@
                 >
                   {{ nav2[0].name }}
                 </a>
-                <ua-button-base
+                <ui-button-base
                   class="nav-2__btn" col="pink"
                   :key="12"
                 >
                   {{ nav2[1].name }}
-                </ua-button-base>
+                </ui-button-base>
               </nav>
             </div>
           </transition>

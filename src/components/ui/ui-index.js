@@ -1,5 +1,5 @@
-import uaButtonBase from '@/components/ui/ui-button-base.vue'
+import uiButtonBase from '@/components/ui/ui-button-base.vue'
 
 export default [
-  { name: 'uaButtonBase', ui: uaButtonBase }
+  { name: 'uiButtonBase', ui: uiButtonBase }
 ]

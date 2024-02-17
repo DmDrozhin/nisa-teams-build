@@ -8,7 +8,7 @@
             <h2 class="adv__title">{{ data.title }}</h2>
             <p class="adv__sub-title">{{ data.subTitle }}</p>
             <div>
-              <socialsBlock :setts="data.socials" />
+              <socials-block :setts="data.socials" />
             </div>
           </div>
 
