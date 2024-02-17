@@ -6,35 +6,50 @@
     { "button": "Get Started", "path": "#get-started" }
   ],
   "s2": [
-    { "id": 1,
+    { "id": 0,
       "title": "Discover the power of creative freedom with Nisa.",
       "path": "#!"
     },
 
-    { "id": 2,
+    { "id": 1,
       "txt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt finibus tortor. Donec lobortis augue sed ante molestie, vitae maximus nunc semper.",
       "path": "#!"
     },
 
-    { "id": 3,
+    { "id": 2,
       "name": "Explore Section",
       "color": "blue",
       "path": "#!explore_section"
     },
 
-    { "id": 4,
+    { "id": 3,
       "trigger": "Add some additional details about your product",
       "path": "#!"
     },
 
-    { "id": 5,
+    { "id": 4,
       "author": "Motiur Leeman",
       "job": "Markating Manager", 
       "img": "avatar.png",
       "alt": "article author photo",
       "path": "#!_author" },
 
+
+    { "id": 5,
+      "name":"man-with-tablet",
+      "path":"page-1/sec-2/",
+      "alt":"Alex, who discovered the power of creative freedom with Nisa",
+      "type":"image/webp",
+      "media":"min-width",
+      "breaks": [
+        ["1440px", "LG", ["1x", "2x"]],
+        ["834px", "MD", ["2x", "3x"]],
+        ["1px", "SM", ["2x", "2.5x", "3x"]]
+      ],
+      "file name sample": "man-with-tablet-LG-@2x.webp"
+    },
     { "id": 6,
+      "picture data": "just another version of id#6",
       "path":"page-1/sec-2/",
       "alt":"Alex, who discovered the power of creative freedom with Nisa",
       "type":"image/webp",
@@ -56,18 +71,6 @@
             "_man-with-tablet_SM-@3x.webp"
           ]
         ]
-      ]
-    },
-    { "id": 7,
-      "name":"man-with-tablet",
-      "path":"page-1/sec-2/",
-      "alt":"Alex, who discovered the power of creative freedom with Nisa",
-      "type":"image/webp",
-      "media":"min-width",
-      "breaks": [
-        ["1440px", "LG", ["1x", "2x"]],
-        ["834px", "MD", ["2x", "3x"]],
-        ["1px", "SM", ["2x", "2.5x", "3x"]]
       ]
     }
   ]

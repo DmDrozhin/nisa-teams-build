@@ -4,6 +4,7 @@
       <div class="sec-1__wrapper">
 
         <div class="sec-1__side-1 side-1">
+
             <picture class="side-1__picture picture">
               <source
                 v-for="it in picDt.srcSetts"
@@ -13,13 +14,18 @@
               />
               <img class="picture__img" :src="picDt.src" :alt="picDt.alt">
             </picture>
+
           </div>
           <div class="sec-1__side-2 side-2">
+
             <div class="side-2__name">{{ sec2[0].title }}</div>
             <div class="side-2__txt">{{ sec2[1].txt }}</div>
-            <ui-button-base class="side-2__btn" :col="sec2[2].color">{{ sec2[2].name }}</ui-button-base>
+            <ui-button-base class="side-2__btn" :col="sec2[2].color">
+              {{ sec2[2].name }}
+            </ui-button-base>
             <div class="side-2__trigger">{{ sec2[3].trigger }}</div>
             <author-block class="side-2__author" :setts="sec2[4]" />
+
           </div>
         </div>
     </div>
@@ -34,28 +40,29 @@ import { computed, onMounted, ref, unref } from 'vue'
 const store = useStore()
 const sec2 = store.getters['structure/HOME_PAGE_PL']('s2') // all data for 2nd section
 
-// this computed created object with needed data for <picture>
+// this computed makes object with needed data for <picture>
 const picDt = computed(() => {
-  const srcSetts = [] // for picture sources
-  const pic = sec2[6] // object with picture settings
+  const srcSetts = [] // arr of data for <source>
+  const pic = sec2[5] // object with picture settings
   for (let idx = 0; idx < pic.breaks.length; idx++) {
-    const dt = pic.breaks[idx] // each break settings ("1440px", "LG", ["1x", "2x"])
+    const setts = pic.breaks[idx] // each break settings ('1440px', 'LG', ['1x', '2x'])
     const source = {}
-    source.media = `(${pic.media}: ${dt[0]})` // media="(min-width: 1440px)"
+    source.media = `(${pic.media}: ${setts[0]})` // media='(min-width: 1440px)'
     source.arr = [] // array with Webpack URLs to img files
-    for (let idx2 = 0; idx2 < dt[2].length; idx2++) {
-      const path = pic.path + pic.name + '-' // "page-1/sec-2/" + "man-with-tablet"
-      const dt2 = dt[2][idx2] // each display density rate constant -> 2x, 3x
-      const url = require(`@/assets/img/${path}${dt[1]}-@${dt2}.webp`) // Webpack's path
-      source.arr.push(url + ' ' + dt2) // adding DPR to the end ...2x, 3x
+    for (let idx2 = 0; idx2 < setts[2].length; idx2++) {
+      const path = pic.path + pic.name + '-' // 'page-1/sec-2/'+'man-with-tablet'
+      const dpr = setts[2][idx2] // each display density rate constant -> 2x, 3x
+      const url = require(`@/assets/img/${path}${setts[1]}-@${dpr}.webp`) // Webpack's URL
+      source.arr.push(url + ' ' + dpr) // adding DPR to the row end ...2x, 3x
     }
     source.srcs = source.arr.join(', ')
     srcSetts.push(source)
   }
+  // preparing main object with <picture> data
   const pictureData = {}
   pictureData.srcSetts = srcSetts
-  pictureData.alt = pic.alt
-  pictureData.src = srcSetts[0].arr[srcSetts[0].arr.length - 1].slice(0, -3) // URL for img src (large picture)
+  pictureData.alt = pic.alt // just alt txt
+  pictureData.src = srcSetts[0].arr[srcSetts[0].arr.length - 1].slice(0, -3) // URL for <img> :src (large picture)
   return pictureData
 })
 
